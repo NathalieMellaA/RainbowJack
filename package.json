@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "🌈  RainbowJack  🌈 ...is a colorful command-line game! Test your luck against the dealer in this classic card game and reach 21 without going bust to win!",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["blackjack", "rainbowjack", "colorful", "command-line", "game", "card game", "interactive", "21", "cli"],
+  "author": "NathalieMellaA",
+  "license": "MIT",
   "dependencies": {
     "chalk": "^5.3.0",
     "modules": "^0.4.0",
