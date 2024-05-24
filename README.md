@@ -97,4 +97,4 @@ Please ensure your code follows the project's coding standards and includes appr
 
 ---
 
-Thank you for checking out 🌈 **RainbowJack** 🌈! I hope you enjoy playing the game as much as we enjoyed creating it. 🌈✨
+Thank you for checking out 🌈 **RainbowJack** 🌈! I hope you enjoy playing the game as much as I enjoyed creating it. 🌈✨
