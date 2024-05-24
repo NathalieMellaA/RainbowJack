@@ -35,7 +35,7 @@ To play 🌈 RainbowJack 🌈, you need to have Node.js and npm installed on you
 
    ```bash
    git clone https://github.com/your-username/rainbowjack.git
-   cd rainbowjack
+   
    ```
 
 2. **Install dependencies:**
