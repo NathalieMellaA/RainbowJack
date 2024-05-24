@@ -29,7 +29,26 @@ Test your luck against the dealer in this classic card game and reach 21 without
 
 ## Installation
 
-To play 🌈 RainbowJack 🌈, you need to have Node.js and npm installed on your system. 
+To play 🌈 RainbowJack 🌈, you need to have Node.js and npm installed on your system. Follow these steps to install and start the game:
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/NathalieMellaA/rainbowjack.git
+   cd rainbowjack
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Run the game:**
+
+   ```bash
+   node index.js
+   ```
 
 ## How to Play
 
