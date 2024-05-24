@@ -81,7 +81,7 @@ To play 🌈 RainbowJack 🌈, you need to have Node.js and npm installed on you
 
 ## Contributing
 
-We welcome contributions to 🌈 RainbowJack 🌈! To contribute, follow these steps:
+Contributions to 🌈 RainbowJack 🌈 are very welcome! To contribute, follow these steps:
 
 1. Fork the repository.
 2. Create a new branch with your feature or bug fix.
