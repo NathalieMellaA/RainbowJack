@@ -5,7 +5,6 @@ import boxen from "boxen";
 import figlet from "figlet";
 
 //Display the name, welcome message, game rules with colors, ASCII art and a colored box
-
 const displayWelcomeMessage = () => {
   const welcomeMessage = figlet.textSync("RainbowJack", {
     horizontalLayout: "full",
@@ -51,11 +50,7 @@ const displayGameRules = () => {
   readlineSync.question("");
 };
 
-displayWelcomeMessage();
-displayHeader();
-displayGameRules();
 //Create a deck of cards
-
 const createDeck = () => {
   const suits = ["♥", "♦", "♠", "♣"];
   const ranks = [
@@ -83,7 +78,6 @@ const createDeck = () => {
 };
 
 //Shuffle the deck of cards
-
 const shuffleDeck = (deck) => {
   for (let i = deck.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -92,7 +86,6 @@ const shuffleDeck = (deck) => {
 };
 
 //Calculate the value of a hand
-
 const calculateHandValue = (hand) => {
   let value = 0;
   let numAces = 0;
@@ -114,14 +107,25 @@ const calculateHandValue = (hand) => {
 };
 
 //Display a hand
-
 const displayHand = (hand) => {
   return hand.map((card) => `${card.rank} of ${card.suit}`).join(", ");
 };
 
-//Play a round of RainbowJack
+const checkDeck = (deck) => {
+  if (deck.length < 10) {
+    console.log(
+      chalk.bold.red(`Deck is low on card., Reshuffling new deck...`)
+    );
+    deck = createDeck();
+    shuffleDeck(deck);
+  }
+  return deck;
+};
 
+//Play a round of RainbowJack
 const playRound = (deck, playerName) => {
+  deck = checkDeck(deck);
+
   let playerHand = [deck.pop(), deck.pop()];
   let dealerHand = [deck.pop(), deck.pop()];
   console.log(
@@ -130,12 +134,12 @@ const playRound = (deck, playerName) => {
   console.log(`Your hand: ${displayHand(playerHand)}`);
 
   //Player's turn
-
   while (calculateHandValue(playerHand) < 21) {
     let choice = readlineSync
       .question("\nDo you want to [h]it or [s]tand?")
       .toLowerCase();
     if (choice === "h") {
+      deck = checkDeck(deck);
       playerHand.push(deck.pop());
       console.log(`Your hand: ${displayHand(playerHand)}`);
     } else if (choice === "s") {
@@ -154,7 +158,6 @@ const playRound = (deck, playerName) => {
   }
 
   //Dealer's turn
-
   console.log(`\nDealer's hand: ${displayHand(dealerHand)}`);
   while (calculateHandValue(dealerHand) < 17) {
     dealerHand.push(deck.pop());
@@ -168,7 +171,7 @@ const playRound = (deck, playerName) => {
     `\nFinal hands - ${playerName}: ${playerValue}, Dealer: ${dealerValue}`
   );
 
-  if (dealerHand > 21 || playerValue > dealerValue) {
+  if (dealerValue > 21 || playerValue > dealerValue) {
     console.log(chalk.bold.green(`🌈 Congratulations! You win! 🌈`));
     return true;
   } else if (playerValue < dealerValue) {
@@ -181,18 +184,23 @@ const playRound = (deck, playerName) => {
 };
 
 //Start the game
-
 const playRainbowJack = () => {
   displayWelcomeMessage();
   displayHeader();
   displayGameRules();
 };
 
-let playerName = readlineSync.question("What is your name? ");
-console.log(chalk.bold.green(`Welcome, ${playerName}! 🌈 Let's get started. 🌈`));
-
 let deck = createDeck();
 shuffleDeck(deck);
+
+displayWelcomeMessage();
+displayHeader();
+displayGameRules();
+
+let playerName = readlineSync.question("What is your name? ");
+console.log(
+  chalk.bold.green(`Welcome, ${playerName}! 🌈 Let's get started. 🌈`)
+);
 
 while (true) {
   playRound(deck, playerName);
