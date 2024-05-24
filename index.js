@@ -4,7 +4,7 @@ import readlineSync from "readline-sync";
 import boxen from "boxen";
 import figlet from "figlet";
 
-//Display the name, welcome message, game rules with colors, ASCII art and a colored box
+//Display the name, welcome message(title), game rules with colors, ASCII art and a colored box
 const displayWelcomeMessage = () => {
   const welcomeMessage = figlet.textSync("RainbowJack", {
     horizontalLayout: "full",
