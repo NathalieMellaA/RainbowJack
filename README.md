@@ -1,6 +1,6 @@
 # 🌈 RainbowJack 🌈
 
-Welcome to 🌈**RainbowJack**🌈, a colorful and exciting command-line card game! This README will guide you through the installation, rules, and how to play the game. 
+Welcome to 🌈 **RainbowJack** 🌈, a colorful and exciting command-line card game! This README will guide you through the installation, rules, and how to play the game. 
 Test your luck against the dealer in this classic card game and reach 21 without going bust to win!
 
 ## Table of Contents
@@ -17,7 +17,7 @@ Test your luck against the dealer in this classic card game and reach 21 without
 
 ## Introduction
 
-🌈**RainbowJack**🌈 is a fun and interactive card game you can play directly from your command line. Inspired by Blackjack, this game adds a splash of color and excitement to your terminal.
+🌈 **RainbowJack** 🌈 is a fun and interactive card game you can play directly from your command line. Inspired by Blackjack, this game adds a splash of color and excitement to your terminal.
 
 ## Features
 
@@ -97,4 +97,4 @@ Please ensure your code follows the project's coding standards and includes appr
 
 ---
 
-Thank you for checking out 🌈**RainbowJack**🌈! We hope you enjoy playing the game as much as we enjoyed creating it. 🌈✨
+Thank you for checking out 🌈 **RainbowJack** 🌈! We hope you enjoy playing the game as much as we enjoyed creating it. 🌈✨
