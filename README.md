@@ -42,12 +42,13 @@ To play 🌈 RainbowJack 🌈, you need to have Node.js and npm installed on you
 
    ```bash
    npm install
+   npm start
    ```
 
 3. **Run the game:**
 
    ```bash
-   node index.js
+   "start": node index.js
    ```
 
 ## How to Play
